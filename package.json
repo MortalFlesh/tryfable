@@ -1,0 +1,36 @@
+{
+    "name": "mf-tryfable",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.fsx",
+    "scripts": {
+        "prebuild": "mkdir -p dist",
+        "build": "fable tryfable/Script.fsx --outDir ./dist",
+        "postbuild": "webpack --entry ./dist/tryfable.js --output-path ./dist/ --output-filename bundle.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MortalFlesh/tryfable.git"
+    },
+    "keywords": [
+        "f#",
+        "fable"
+    ],
+    "author": "MortalFlesh <mortal_flesh@seznam.cz> (https://github.com/MortalFlesh)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/MortalFlesh/tryfable/issues"
+    },
+    "homepage": "https://github.com/MortalFlesh/tryfable#readme",
+    "dependencies": {
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-runtime": "^6.23.0",
+        "fable-compiler": "^0.7.51",
+        "fable-core": "^0.7.30",
+        "source-map-loader": "^0.2.1",
+        "webpack": "^2.6.1"
+    }
+}
